@@ -66,6 +66,9 @@ if mode == '1':
 if mode == '2':
     from AskYunhu import FileCtrl
 
-    # Load MetaJson List
+    # Load File List
     MetaJsonList = os.listdir(MetaJsonFolder)
-    print(MetaJsonList)
+    print('\n     可下载列表')
+    print('--------------------')
+    for Item in MetaJsonList:
+        print(f' {MetaJsonList.index(Item)+1}) {os.path.splitext(os.path.basename(Item))[0]}')
